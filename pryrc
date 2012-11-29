@@ -1,7 +1,8 @@
-# Navigation aliases for pry-nav gem
-if Pry.commands.find {|command| command[0] == "continue"}
+begin
   Pry.commands.alias_command "c", "continue"
   Pry.commands.alias_command "s", "step"
   Pry.commands.alias_command "n", "next"
   Pry.commands.alias_command "f", "finish"
+rescue Exception
 end
+Pry.config.color = true

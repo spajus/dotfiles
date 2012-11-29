@@ -34,8 +34,9 @@ plugins=(git git_timer)
 source $ZSH/oh-my-zsh.sh
 
 # Exports
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export EDITOR=vim
+export LC_ALL="en_US.UTF-8"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
