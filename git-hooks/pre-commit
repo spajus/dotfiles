@@ -3,16 +3,16 @@
 
 flag = false
 
-files = `git diff --name-only --diff-filter=ACM`.split("\n")
+files = `git diff --cached --name-only --diff-filter=ACM`.split("\n")
 files.each do |file|
-  results = `git diff #{file} | grep "^\+[^+]" | grep -e "binding.pry" -e "focus: true" -e ":focus => true" -e "console.log" -e "debugger"`.split("\n").map { |r| r.sub(/^\+[\s\t]*/, '') }
+  results = `git diff --cached #{file} | grep "^\+[^+]" | grep -e "binding.pry" -e "focus: true" -e ":focus => true" -e "console.log" -e "debugger"`.split("\n").map { |r| r.sub(/^\+[\s\t]*/, '') }
 
   if $? == 0
     puts file
     puts results.map { |r|
       `grep -n "#{r}" #{file}`
     }.join("")
-    puts "Please remove development stuff before commiting"
+    puts "Please remove development stuff before commiting or commit with --no-verify"
     flag = true
   end
 end
