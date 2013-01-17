@@ -44,6 +44,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Aliases
 alias retag="ctags -R --exclude=.git --exclude=log *"
 alias gemset="rvm current"
+alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
 # Add ~/.extra.zsh with additional stuff that should not be public
 source $HOME/.extra.zsh
@@ -52,3 +54,5 @@ source $HOME/.extra.zsh
 unsetopt correct_all
 
 
+# Rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

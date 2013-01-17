@@ -1,18 +1,20 @@
 #!/usr/bin/env ruby
-if `grep -rls "debugger" *` != ""
-  puts "You've left a debugger in!"
-  exit(1)
+# vim: set syntax=ruby
+
+flag = false
+
+files = `git diff --cached --name-only --diff-filter=ACM | grep "_spec\.rb$"`.split("\n")
+files.each do |file|
+  results = `git diff --cached  #{file} | grep "^\+[^+]" | grep -e "binding.pry" -e "focus: true" -e ":focus => true" -e "console.log" -e "debugger"`.split("\n").map { |r| r.sub(/^\+[\s\t]*/, '') }
+
+  if $? == 0
+    puts file
+    puts results.map { |r|
+      `grep -n "#{r}" #{file}`
+    }.join("")
+    puts "Please remove binding.pry and :focus => true from your test before committing"
+    flag = true
+  end
 end
-if `grep -rls "binding.pry" *` != ""
-  puts "You've left a binding.pry in!"
-  exit(1)
-end
-if `grep -rls "focus: true" *` != ""
-  puts "You've left focus: true in"
-  exit(1)
-end
-if `egrep -rls "^<<<<<<< |^>>>>>>> |^=======$" * | xargs file | egrep 'script|text'` != ""
-  puts "You screwed the merge!"
-  puts `egrep -rls "^<<<<<<< |^>>>>>>> |^=======$" * | xargs file | egrep 'script|text' | awk -F: '{print $1}'`
-  exit(1)
-end
+
+exit 1 if flag
