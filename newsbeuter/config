@@ -3,3 +3,4 @@ color listnormal   white   black
 color listfocus    yellow  white   bold
 color info         yellow  white   bold
 color article      white   black
+browser chrome

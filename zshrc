@@ -39,6 +39,7 @@ export EDITOR=vim
 export LC_ALL="en_US.UTF-8"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=~/.dotfiles/bin:$PATH
 
 
 # Aliases
@@ -52,8 +53,6 @@ function lt() { ls -ltrsa "$@" | tail; }
 function psgrep() { pstree | grep -v grep | grep "$@" -i --color=auto; }
 function fname() { find . -iname "*$@*"; }
 
-# No more autocorrect
-unsetopt correct_all
 
 # Rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -65,3 +64,7 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 # Add ~/.extra.zsh with additional stuff that should not be public
 source $HOME/.extra.zsh
+
+# No more autocorrect
+unsetopt correct
+unsetopt correct_all
