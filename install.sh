@@ -9,7 +9,8 @@ ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/pryrc ~/.pryrc
 ln -s ~/.dotfiles/inputrc ~/.inputrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/newsbeuter ~/.newsbeuter
+# Awesome Print gem config
+ln -s ~/.dotfiles/aprc ~/.aprc
 
 # ZSH custom stuff
 ln -s ~/.dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
