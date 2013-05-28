@@ -38,6 +38,9 @@ export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbi
 export EDITOR=vim
 export LC_ALL="en_US.UTF-8"
 
+# 10ms for key sequences
+export KEYTIMEOUT=1
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=~/.dotfiles/bin:$PATH
 
@@ -68,3 +71,6 @@ source $HOME/.extra.zsh
 # No more autocorrect
 unsetopt correct
 unsetopt correct_all
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
