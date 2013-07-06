@@ -50,6 +50,8 @@ alias retag="ctags -R --exclude=.git --exclude=log *"
 alias gemset="rvm current"
 alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+alias be='bundle exec'
+alias bake='bundle exec rake'
 
 # Functions
 function lt() { ls -ltrsa "$@" | tail; }
