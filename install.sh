@@ -9,6 +9,9 @@ ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/pryrc ~/.pryrc
 ln -s ~/.dotfiles/inputrc ~/.inputrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+
 # Awesome Print gem config
 ln -s ~/.dotfiles/aprc ~/.aprc
 
