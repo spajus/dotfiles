@@ -18,3 +18,7 @@ ln -s ~/.dotfiles/aprc ~/.aprc
 # ZSH custom stuff
 ln -s ~/.dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
 ln -s ~/.dotfiles/oh-my-zsh/custom/themes ~/.oh-my-zsh/custom/themes
+
+# iTerm2 preferences
+rm ~/Library/Preferences/com.googlecode.iterm2.plist
+ln -s ~/.dotfiles/Library/Preferences/com.googlecode.iterm2.plist ~/Library/Preferences
