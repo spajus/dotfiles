@@ -46,6 +46,7 @@ PATH=~/.dotfiles/bin:$PATH
 
 
 # Aliases
+alias ctags="`brew --prefix`/bin/ctags"
 alias retag="ctags -R --exclude=.git --exclude=log *"
 alias gemset="rvm current"
 alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
