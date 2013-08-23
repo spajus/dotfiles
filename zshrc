@@ -29,7 +29,7 @@ ZSH_THEME="spajus"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git_timer)
+plugins=(git git_timer capistrano)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,6 +53,10 @@ alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias be='bundle exec'
 alias brake='bundle exec rake'
+
+
+# Garmin history cleanup
+alias garmin-cleanup='rm -rf ~/Library/Application\ Support/Garmin/Devices/3848878505/{Activities,History}/*'
 
 # Functions
 function lt() { ls -ltrsa "$@" | tail; }
