@@ -47,7 +47,7 @@ PATH=~/.dotfiles/bin:$PATH
 
 # Aliases
 alias ctags="`brew --prefix`/bin/ctags"
-alias retag="ctags -R --exclude=.git --exclude=log *"
+alias retag="ctags -R --exclude=.git --exclude=log --exclude=public --exclude=doc --exclude=app/assets *"
 alias gemset="rvm current"
 alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
@@ -81,3 +81,9 @@ unsetopt correct_all
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/Users/spajus/perl5";
+export PERL_MB_OPT="--install_base /Users/spajus/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/Users/spajus/perl5";
+export PERL5LIB="/Users/spajus/perl5/lib/perl5:$PERL5LIB";
+export PATH="/Users/spajus/perl5/bin:$PATH";
