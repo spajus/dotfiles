@@ -5,7 +5,7 @@
 .DS_Store
 rails_footnotes.rb
 .rails_footnotes
-tags
+/tags
 gems.tags
 zeus.json
 .pem

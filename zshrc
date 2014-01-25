@@ -53,6 +53,7 @@ alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias be='bundle exec'
 alias brake='bundle exec rake'
+alias ssh_unsafe='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 
 # Garmin history cleanup
