@@ -88,3 +88,9 @@ export PERL_MB_OPT="--install_base /Users/spajus/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/Users/spajus/perl5";
 export PERL5LIB="/Users/spajus/perl5/lib/perl5:$PERL5LIB";
 export PATH="/Users/spajus/perl5/bin:$PATH";
+
+bindkey -e
+
+# ctrl+left/right arrow (OS X)
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
