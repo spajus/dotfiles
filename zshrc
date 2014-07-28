@@ -55,6 +55,8 @@ alias be='bundle exec'
 alias brake='bundle exec rake'
 alias ssh_unsafe='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
+# Kitchen with alert
+function kitchen() { command kitchen "$@"; osascript -e 'tell app "iTerm" to display alert "Kitchen completed"' }
 
 # Garmin history cleanup
 alias garmin-cleanup='rm -rf ~/Library/Application\ Support/Garmin/Devices/3848878505/{Activities,History}/*'
