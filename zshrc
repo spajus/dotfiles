@@ -41,14 +41,12 @@ export LC_ALL="en_US.UTF-8"
 # 10ms for key sequences
 export KEYTIMEOUT=1
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=~/.dotfiles/bin:$PATH
 
 
 # Aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias retag="ctags -R --exclude=.git --exclude=log --exclude=public --exclude=doc --exclude=app/assets *"
-alias gemset="rvm current"
 alias wtf='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias be='bundle exec'
@@ -67,10 +65,8 @@ function psgrep() { pstree | grep -v grep | grep "$@" -i --color=auto; }
 function fname() { find . -iname "*$@*"; }
 
 
-# Rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export RUBY_HEAP_MIN_SLOTS=1000000
+#export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_GC_HEAP_INIT_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
@@ -96,3 +92,6 @@ bindkey -e
 # ctrl+left/right arrow (OS X)
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# RBENV
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
