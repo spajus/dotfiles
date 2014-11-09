@@ -7,7 +7,6 @@ function rsync_dotfiles() {
   echo "Syncing ~/.*"
   rsync --exclude ".DS_Store" -avh --no-perms home/ ~
   echo
-  source ~/.bash_profile
 }
 
 function update_osx() {
@@ -53,3 +52,5 @@ fi
 unset rsync_dotfiles
 unset update_vim
 unset update_osx
+
+. ~/.bash_profile
