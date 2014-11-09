@@ -4,17 +4,9 @@ DOTFILES_PATH=${0%/*}
 cd $DOTFILES_PATH
 
 function rsync_dotfiles() {
-
   echo "Syncing ~/.*"
-  rsync --exclude ".git/" \
-        --exclude ".DS_Store" \
-        --exclude "apply.sh" \
-        --exclude "README.md" \
-        --exclude "osx" \
-        --exclude "LICENSE-MIT.txt" \
-        -avh --no-perms . ~;
+  rsync --exclude ".DS_Store" -avh --no-perms home/ ~;
   echo;
-
   source ~/.bash_profile;
 }
 
