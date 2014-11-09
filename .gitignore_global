@@ -1,0 +1,11 @@
+.rvmrc
+*.swp
+*.swo
+.idea
+.DS_Store
+rails_footnotes.rb
+.rails_footnotes
+/tags
+gems.tags
+zeus.json
+.pem

@@ -1,0 +1,28 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[user]
+	name = Tomas Varaneckas
+	email = tomas.varaneckas@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	excludesfile = /Users/spajus/.gitignore_global
+[branch]
+	autosetuprebase = always
+[branch "master"]
+	rebase = true
+[rebase]
+	stat = true
+[push]
+	default = current
+[web]
+	browser = open
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
