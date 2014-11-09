@@ -39,7 +39,6 @@ set backspace=indent,eol,start                    " fix backspace behavior
 set modeline                                      " set vi mode using last lines in files
 set modelines=3                                   " look for modeline in last 3 lines
 set scrolloff=4                                   " scroll offset
-set expandtab
 set noerrorbells
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -57,6 +56,17 @@ set number                                        " show numbers
 set showcmd
 set ls=2                                          " always show status line
 set shortmess=atI
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indentation
+set autoindent
+set smarttab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set expandtab
+set textwidth=99
+set colorcolumn=100
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
