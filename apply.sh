@@ -4,12 +4,11 @@ DOTFILES_PATH=${0%/*}
 cd $DOTFILES_PATH
 
 function rsync_dotfiles() {
-  
+
   echo "Syncing ~/.*"
   rsync --exclude ".git/" \
         --exclude ".DS_Store" \
         --exclude "apply.sh" \
-        --exclude ".vim/" \
         --exclude "README.md" \
         --exclude "osx" \
         --exclude "LICENSE-MIT.txt" \
@@ -22,7 +21,7 @@ function rsync_dotfiles() {
 function update_osx() {
   if [[ $OSTYPE == darwin* ]]; then
     echo "Syncing OSX specific stuff";
-    rsync --exclude ".DS_Store" --exclude ".vim/" -avh --no-perms osx/ ~;        
+    rsync --exclude ".DS_Store" -avh --no-perms osx/ ~;
     plutil -convert binary1 ~/Library/Preferences/com.googlecode.iterm2.plist;
     killall cfprefsd;
     defaults read com.googlecode.iterm2 > /dev/null;
@@ -42,8 +41,6 @@ function update_vim() {
     echo "Installing Vundle";
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
   fi;
-  echo "Installing vim plugins"
-  vim +PluginInstall! +qall
   echo;
 }
 

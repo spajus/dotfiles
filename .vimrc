@@ -40,6 +40,7 @@ set modeline                                      " set vi mode using last lines
 set modelines=3                                   " look for modeline in last 3 lines
 set scrolloff=4                                   " scroll offset
 set expandtab
+set noerrorbells
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual stuff
@@ -53,7 +54,9 @@ highlight SignColum ctermbg=8
 set title
 set ruler
 set number                                        " show numbers
+set showcmd
 set ls=2                                          " always show status line
+set shortmess=atI
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
@@ -79,3 +82,8 @@ set tags+=gems.tags " ruby gems ctags
 " Key bindings
 set pastetoggle=<F2>
 
+" Navigate between split windows with arrows
+nnoremap <Right> <ESC><C-w>l
+nnoremap <Left> <ESC><C-w>h
+nnoremap <Up> <ESC><C-w>k
+noremap <Down> <ESC><C-w>j
