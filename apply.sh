@@ -5,10 +5,16 @@ function rsync_dotfiles() {
         --exclude ".DS_Store" \
         --exclude "apply.sh" \
         --exclude "README.md" \
+        --exclude "osx" \
         --exclude "LICENSE-MIT.txt" \
         -avh --no-perms . ~;
   source ~/.bash_profile;
 }
+
+if [[ $OSTYPE == darwin* ]]; then
+  echo "Syncing OSX specific stuff";
+  rsync --exclude ".DS_Store" -avh --no-perms osx/ ~;        
+fi;
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   rsync_dotfiles;
