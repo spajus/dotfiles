@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 " My plugins
 Plugin 'altercation/solarized', { 'rtp': 'vim-colors-solarized/' }
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
