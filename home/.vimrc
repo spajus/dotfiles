@@ -18,6 +18,7 @@ Plugin 'altercation/solarized', { 'rtp': 'vim-colors-solarized/' }
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-fugitive'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
