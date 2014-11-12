@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
