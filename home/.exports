@@ -1,2 +1,4 @@
 export LC_ALL="en_US.UTF-8"
 export EDITOR=vim
+export WECHALLUSER="spajus"
+export WECHALLTOKEN="551AD-D9840-8A934-16585-13635-42C2D"
