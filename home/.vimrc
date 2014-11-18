@@ -20,6 +20,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
