@@ -7,6 +7,11 @@ set nocompatible
 filetype off
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Allow per-folder settings
+set exrc
+set secure
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Load Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -21,6 +26,7 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
