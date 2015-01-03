@@ -27,6 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
