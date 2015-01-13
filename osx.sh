@@ -3,8 +3,8 @@
 # Ask for the administrator password upfront
 sudo -v
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# Set standby delay to 3 hours (default is 1 hour)
+sudo pmset -a standbydelay 10800
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -19,10 +19,10 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 #    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 #done
 
-defaults write com.apple.systemuiserver menuExtras -array \
-  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-  "/System/Library/CoreServices/Menu Extras/Clock.menu"
+# defaults write com.apple.systemuiserver menuExtras -array \
+#  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+#  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+#  "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -132,7 +132,7 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
+defaults write NSGlobalDomain AppleLanguages -array "en" "lt"
 defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
@@ -328,10 +328,8 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
-
 # Hide Safari’s sidebar in Top Sites
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
