@@ -12,7 +12,7 @@
         interactive = auto
         status = auto
 [core]
-        excludesfile = /Users/spajus/.gitignore_global
+        excludesfile = ~/.gitignore_global
         editor = vim -f
 [branch]
         autosetuprebase = always
