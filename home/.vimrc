@@ -28,6 +28,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'fatih/vim-go'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
