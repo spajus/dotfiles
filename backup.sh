@@ -49,6 +49,10 @@ rsync -a --progress \
   --exclude .DS_Store \
   --exclude Downloads \
   --exclude "*.hds" \
+  --exclude ".berkshelf/" \
+  --exclude ".kitchen/" \
+  --exclude ".vagrant/" \
+  --exclude ".vagrant.d/" \
   --exclude Dropbox \
   --exclude ".vim/bundle/" \
   --exclude ".dotfiles" \
