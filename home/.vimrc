@@ -31,6 +31,7 @@ Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'fatih/vim-go'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'rodjek/vim-puppet'
+Plugin 'rust-lang/rust.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
