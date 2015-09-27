@@ -32,6 +32,7 @@ Plugin 'fatih/vim-go'
 Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'rodjek/vim-puppet'
 Plugin 'rust-lang/rust.vim'
+Plugin 'rhysd/vim-crystal'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
