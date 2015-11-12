@@ -82,8 +82,8 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
-set textwidth=99
-set colorcolumn=100
+set textwidth=79
+set colorcolumn=80
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
