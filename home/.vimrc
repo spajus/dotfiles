@@ -33,6 +33,7 @@ Plugin 'smerrill/vcl-vim-plugin'
 Plugin 'rodjek/vim-puppet'
 Plugin 'rust-lang/rust.vim'
 Plugin 'rhysd/vim-crystal'
+Plugin 'airblade/vim-gitgutter'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
