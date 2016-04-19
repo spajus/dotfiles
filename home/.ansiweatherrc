@@ -1,0 +1,5 @@
+location:Vilnius,LT
+fetch_cmd:ftp -V -o -
+units:metric
+daylight:true
+ansi:false
