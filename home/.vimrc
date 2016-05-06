@@ -25,6 +25,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -58,6 +59,8 @@ set modeline                                      " set vi mode using last lines
 set modelines=3                                   " look for modeline in last 3 lines
 set scrolloff=4                                   " scroll offset
 set noerrorbells
+set foldmethod=syntax
+set foldlevel=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual stuff
