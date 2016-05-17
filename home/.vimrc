@@ -59,8 +59,6 @@ set modeline                                      " set vi mode using last lines
 set modelines=3                                   " look for modeline in last 3 lines
 set scrolloff=4                                   " scroll offset
 set noerrorbells
-set foldmethod=syntax
-set foldlevel=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual stuff
