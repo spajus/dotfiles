@@ -102,7 +102,19 @@ flags = [
 #
 # Most projects will NOT need to set this to anything; you can just change the
 # 'flags' list of compilation flags. Notice that YCM itself uses that approach.
-compilation_database_folder = ''
+
+# --- compilation database folder auto-find ---
+import glob
+def FindCompilationDB ():
+  DB = glob.glob ('*/compile_commands.json')
+  if len (DB) == 0:
+    return ''
+
+  # return the first one we see
+  path = os.getcwd() + '/' + DB[0]
+  return os.path.dirname (path)
+
+compilation_database_folder = FindCompilationDB()
 
 if os.path.exists( compilation_database_folder ):
   database = ycm_core.CompilationDatabase( compilation_database_folder )
