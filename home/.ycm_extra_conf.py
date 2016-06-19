@@ -114,6 +114,12 @@ def FindCompilationDB():
   path = os.getcwd() + '/' + DB[0]
   return os.path.dirname (path)
 
+def FindMainFile():
+  main_file = glob.glob('*/main.c*')
+  if len(main_file) == 0:
+    return None
+  return os.getcwd() + '/' + main_file[0]
+
 compilation_database_folder = FindCompilationDB()
 
 if os.path.exists( compilation_database_folder ):
@@ -183,6 +189,9 @@ def GetCompilationInfoForFile( filename ):
               replacement_file )
             if compilation_info.compiler_flags_:
               return compilation_info
+    fallback_file = FindMainFile()
+    if fallback_file:
+      return database.GetCompilationInfoForFile(fallback_file)
     return None
   return database.GetCompilationInfoForFile( filename )
 
