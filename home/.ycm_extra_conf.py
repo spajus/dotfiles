@@ -105,7 +105,7 @@ flags = [
 
 # --- compilation database folder auto-find ---
 import glob
-def FindCompilationDB ():
+def FindCompilationDB():
   DB = glob.glob ('*/compile_commands.json')
   if len (DB) == 0:
     return ''
@@ -175,6 +175,14 @@ def GetCompilationInfoForFile( filename ):
           replacement_file )
         if compilation_info.compiler_flags_:
           return compilation_info
+      else:
+        # check in corresponding /src/ dir
+        replacement_file = replacement_file.replace('/include/', '/src/')
+        if os.path.exists( replacement_file ):
+            compilation_info = database.GetCompilationInfoForFile(
+              replacement_file )
+            if compilation_info.compiler_flags_:
+              return compilation_info
     return None
   return database.GetCompilationInfoForFile( filename )
 
