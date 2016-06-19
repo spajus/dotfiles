@@ -189,11 +189,13 @@ def GetCompilationInfoForFile( filename ):
               replacement_file )
             if compilation_info.compiler_flags_:
               return compilation_info
-    fallback_file = FindMainFile()
-    if fallback_file:
-      return database.GetCompilationInfoForFile(fallback_file)
-    return None
-  return database.GetCompilationInfoForFile( filename )
+  compilation_info =  database.GetCompilationInfoForFile( filename )
+  if compilation_info.compiler_flags_:
+      return compilation_info
+  fallback_file = FindMainFile()
+  if fallback_file:
+    return database.GetCompilationInfoForFile(fallback_file)
+  return None
 
 
 def FlagsForFile( filename, **kwargs ):
