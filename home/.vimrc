@@ -67,6 +67,9 @@ if has('gui_running')
 else
   set background=dark
 endif
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termcolors = 256
 colorscheme solarized
 highlight SignColum ctermbg=8
 set title
