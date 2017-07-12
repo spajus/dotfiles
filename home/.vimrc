@@ -62,6 +62,7 @@ set noerrorbells
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Visual stuff
+set term=screen-256color                          " for tmux
 if has('gui_running')
   set background=light
 else
