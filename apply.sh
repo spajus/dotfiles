@@ -54,3 +54,5 @@ unset update_vim
 unset update_osx
 
 . ~/.bash_profile
+
+$SHELL -l
