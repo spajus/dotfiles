@@ -27,7 +27,7 @@ function update_vim() {
   mkdir -p ~/.vim/bundle/
   if [ -d ~/.vim/bundle/Vundle.vim ]; then
     echo "Updating Vundle"
-    cd ~/.vim/bundle/Vundle.vim && git pull; cd $DOTFILES_PATH
+    cd ~/.vim/bundle/Vundle.vim && git pull; cd -
   else
     echo "Installing Vundle"
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -37,15 +37,15 @@ function update_vim() {
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   rsync_dotfiles
-  update_vim
   update_osx
+  update_vim
 else
   read -p "Are you sure you want to rsync your .dotfiles to ~? (y/n) " -n 1
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     rsync_dotfiles
-    update_vim
     update_osx
+    update_vim
   fi
 fi
 
