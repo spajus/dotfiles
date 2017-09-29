@@ -22,6 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/solarized', { 'rtp': 'vim-colors-solarized/' }
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
