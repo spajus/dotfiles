@@ -108,6 +108,7 @@ set hls
 " Search
 set wildchar=<Tab> wildmenu wildmode=full
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*.class
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
