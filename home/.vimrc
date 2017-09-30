@@ -93,7 +93,7 @@ set softtabstop=2
 set expandtab
 set textwidth=79
 set colorcolumn=80
-set listchars=tab:>~,nbsp:_,trail:.
+exec "set listchars=tab:\uBB\uBB,nbsp:~,trail:\uB7"
 set list
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
