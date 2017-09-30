@@ -93,6 +93,8 @@ set softtabstop=2
 set expandtab
 set textwidth=79
 set colorcolumn=80
+set listchars=tab:>~,nbsp:_,trail:.
+set list
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Search
