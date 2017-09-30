@@ -38,6 +38,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'rhysd/vim-crystal'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim-scripts/vis'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
