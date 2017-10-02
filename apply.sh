@@ -13,7 +13,9 @@ function update_osx() {
   if [[ $OSTYPE == darwin* ]]; then
     echo "Syncing OSX specific stuff"
     rsync --exclude ".DS_Store" -avh --no-perms osx/ ~
+    # plutil -convert xml1 ~/Library/Preferences/com.googlecode.iterm2.plist
     plutil -convert binary1 ~/Library/Preferences/com.googlecode.iterm2.plist
+
     killall cfprefsd
     defaults read com.googlecode.iterm2 > /dev/null
     killall cfprefsd

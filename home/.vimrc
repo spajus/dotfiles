@@ -40,7 +40,6 @@ Plugin 'rhysd/vim-crystal'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-scripts/vis'
-Plugin 'svermeulen/vim-easyclip'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
