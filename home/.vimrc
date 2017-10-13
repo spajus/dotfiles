@@ -129,3 +129,11 @@ nnoremap <Right> <ESC><C-w>l
 nnoremap <Left> <ESC><C-w>h
 nnoremap <Up> <ESC><C-w>k
 noremap <Down> <ESC><C-w>j
+
+" I have a bad habbit of keepping shift depressed for too long
+:command Wq wq
+:command WQ wq
+:command W w
+:command Q q
+:command Qa qa
+:command QA qa
