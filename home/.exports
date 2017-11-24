@@ -3,6 +3,8 @@ export EDITOR=vim
 export WECHALLUSER="spajus"
 export WECHALLTOKEN="551AD-D9840-8A934-16585-13635-42C2D"
 
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # avoid duplicates..
 export HISTCONTROL=ignoredups:erasedups
 
