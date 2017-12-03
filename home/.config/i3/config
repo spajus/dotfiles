@@ -181,3 +181,6 @@ mode "$mode_system" {
 }
 
 bindsym $mod+Delete mode "$mode_system"
+
+bindsym --release Print exec "screenshot -s ~/Pictures/"
+bindsym --release $mod+Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
