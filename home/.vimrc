@@ -137,3 +137,7 @@ noremap <Down> <ESC><C-w>j
 :command Q q
 :command Qa qa
 :command QA qa
+
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
