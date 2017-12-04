@@ -33,12 +33,12 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
+[pavolume]
 label=VOL
-#label=♪
-instance=Master
+label=♪
+#instance=Master
 #instance=PCM
-interval=once
+interval=5
 signal=10
 
 # Memory usage
