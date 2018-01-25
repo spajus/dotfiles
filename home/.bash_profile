@@ -14,3 +14,5 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 [ -f "/usr/share/git/completion/git-prompt.sh" ] && . /usr/share/git/completion/git-prompt.sh
+
+eval "$(rbenv init -)"
