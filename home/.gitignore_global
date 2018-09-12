@@ -9,3 +9,4 @@ tags
 gems.tags
 zeus.json
 .pem
+.fuse_hidden*
