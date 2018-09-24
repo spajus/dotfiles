@@ -167,6 +167,7 @@ bindsym Shift+XF86Display exec xrandr --output HDMI1 --off --output eDP1 --auto
 bindsym $mod+Shift+m exec xrandr --output eDP1 --off --output HDMI1 --auto
 bindsym $mod+Shift+n exec xrandr --output eDP1 --auto --output HDMI1 --off
 bindsym $mod+Shift+b exec xrandr --output eDP1 --mode 1280x720
+bindsym $mod+Shift+u exec xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 1 -time 0 -steps 1
 bindsym XF86MonBrightnessDown exec xbacklight -dec 1 -time 0 -steps 1
