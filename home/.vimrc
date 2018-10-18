@@ -40,7 +40,6 @@ Plugin 'rhysd/vim-crystal'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-scripts/vis'
-Plugin 'soramugi/auto-ctags.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Finish loading Vundle
