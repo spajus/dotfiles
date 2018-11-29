@@ -175,6 +175,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
+# move focused window between monitors
+bindsym $mod+Shift+greater move container to output right
+bindsym $mod+Shift+less move container to output left
+
 set $Locker i3lock -c ffffff && sleep 1
 
 # xdg autostart
