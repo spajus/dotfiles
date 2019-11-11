@@ -179,7 +179,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+Shift+greater move container to output right
 bindsym $mod+Shift+less move container to output left
 
-set $Locker i3lock -c ffffff && sleep 1
+set $Locker i3lock -c 101010 && sleep 1
 
 # xdg autostart
 exec --no-startup-id ~/.config/i3/autostart
