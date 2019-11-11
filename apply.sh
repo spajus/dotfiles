@@ -37,10 +37,16 @@ function update_vim() {
   echo
 }
 
+function update_i3() {
+  sudo mkdir -p /usr/lib/i3blocks/
+  sudo cp home/.config/i3blocks/blocks/* /usr/lib/i3blocks/
+}
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   rsync_dotfiles
   update_osx
   update_vim
+  update_i3
 else
   read -p "Are you sure you want to rsync your .dotfiles to ~? (y/n) " -n 1
   echo
@@ -48,6 +54,7 @@ else
     rsync_dotfiles
     update_osx
     update_vim
+    update_i3
   fi
 fi
 
