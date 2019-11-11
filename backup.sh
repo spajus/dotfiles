@@ -55,6 +55,7 @@ rsync -a --progress \
   --exclude ".vagrant.d/" \
   --exclude Dropbox \
   --exclude ".vim/bundle/" \
+  --exclude "/sys/" \
   --exclude ".dotfiles" \
   --exclude ".rbenv/versions/" \
   --exclude "Library/Caches/" \
