@@ -169,11 +169,11 @@ bindsym $mod+Shift+n exec xrandr --output eDP1 --auto --output HDMI1 --off
 bindsym $mod+Shift+b exec xrandr --output eDP1 --mode 1280x720
 bindsym $mod+Shift+u exec xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1 -time 0 -steps 1
-bindsym XF86MonBrightnessDown exec xbacklight -dec 1 -time 0 -steps 1
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86MonBrightnessUp exec xbacklight -inc 1 -time 0 -steps 100
+bindsym XF86MonBrightnessDown exec xbacklight -dec 1 -time 0 -steps 100
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # move focused window between monitors
 bindsym $mod+Shift+greater move container to output right

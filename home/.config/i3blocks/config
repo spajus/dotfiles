@@ -36,13 +36,14 @@ interval=500
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[pavolume]
+[volume]
 label=VOL
 label=♪
 #instance=Master
 #instance=PCM
-interval=5
+interval=15
 signal=10
+STEP=5%
 
 # Memory usage
 #
